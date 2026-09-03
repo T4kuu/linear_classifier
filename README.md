@@ -63,11 +63,18 @@ $0 < p < 1$
 $p = P(y=1|x)$
 
 ### Likelihood and ln-likelihood
-$p^y(1-p)^{1-y}; \; y \in \{0; 1\}$
+$p^y(1-p)^{1-y}; y \in \{0; 1\}$
 
 $ln(ab) = ln(a) + ln(b)$ and $ln(a^b)=bln(a)$
 
-$L={\Pi}_{i=1}^Np_i^{y_i}​​(1−p_i​)^{1−y_i} \; \to \; ln(L)= {\Sigma}_{i=1}^N[y_iln(p_i) + (1-y_i)ln(1-p_i)]​$
+$$
+L = \prod_{i=1}^{N} p_i^{y_i}(1-p_i)^{1-y_i}
+\quad\rightarrow\quad
+\ln(L) = \sum_{i=1}^{N}
+\left[
+y_i\ln(p_i) + (1-y_i)\ln(1-p_i)
+\right]
+$$
 
 ### BCE
 $min(-ln(L))$
